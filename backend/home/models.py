@@ -10,3 +10,4 @@ class Vbb4(models.Model):
 class Jvcee(models.Model):
     'Generated Model'
     xsfr = models.BigIntegerField()
+    ghtt = models.BigIntegerField(null=True,blank=True,)
