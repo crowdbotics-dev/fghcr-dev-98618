@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Cvcb
-from .serializers import CvcbSerializer
+from home.models import Cvcb,Jvcee,Vbb4
+from .serializers import CvcbSerializer,JvceeSerializer,Vbb4Serializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,13 @@ class CvcbViewSet(viewsets.ModelViewSet):
     serializer_class = CvcbSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Cvcb.objects.all()
+
+class Vbb4ViewSet(viewsets.ModelViewSet):
+    serializer_class = Vbb4Serializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Vbb4.objects.all()
+
+class JvceeViewSet(viewsets.ModelViewSet):
+    serializer_class = JvceeSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Jvcee.objects.all()

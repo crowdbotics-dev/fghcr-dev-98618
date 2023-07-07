@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Cvcb
+from home.models import Cvcb,Jvcee,Vbb4
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,16 @@ class CvcbSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cvcb
+        fields = "__all__"
+
+class Vbb4Serializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Vbb4
+        fields = "__all__"
+
+class JvceeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Jvcee
         fields = "__all__"
